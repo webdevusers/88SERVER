@@ -2,10 +2,17 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
-const port = 3000;
+const port = proccess.port.env;
 const router = require('./Items/router/router')
 
-app.use(cors())
+app.use(cors({
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+  credentials: true,
+  optionsSuccessStatus: 204,
+}));
+
 app.use(express.json())
 
 app.use('/item', router)

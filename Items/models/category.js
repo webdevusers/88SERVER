@@ -8,7 +8,7 @@ const ItemSchema = new Schema({
   maxLvl: {type: Number},
   parentCategory: { type: Schema.Types.ObjectId, ref: 'Category' },
   childCategories: [{ type: Schema.Types.ObjectId, ref: 'Category' }],
-  items: [{type: Schema.Types.ObjectId, ref: 'Items'}]
+  items: [{type: Schema.Types.ObjectId, ref: 'items'}]
 });
 
 module.exports = model("Category", ItemSchema);

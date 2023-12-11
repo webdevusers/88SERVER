@@ -1,6 +1,6 @@
 const {Schema, model} = require('mongoose')
 
-const ItemSchema = new Schema({
+const items = new Schema({
     name: String,
     desc: String,
     chars: Array,
@@ -10,7 +10,10 @@ const ItemSchema = new Schema({
     views: Number,
     likes: Number,
     images: Array,
+    keywords: Array,
+    stock_quantity: Number,
+    seller: String,
     categoryID: {type: Schema.Types.ObjectId}
 })
 
-module.exports = model('Item', ItemSchema)
+module.exports = model('items', items)
