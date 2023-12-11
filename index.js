@@ -19,7 +19,7 @@ app.use('/item', router)
 
 const start = async () => {
     try {
-        await mongoose.connect('mongodb+srv://88xgroup:3ziLyM33kkm26Txs@88server.etef7ng.mongodb.net/');
+        await mongoose.connect('Что там, тебе база данных нужна? Иди создай);
         app.listen(port, () => {
             console.log(`Server is running on port ${port}`);
         });
