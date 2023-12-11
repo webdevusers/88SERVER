@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
-const port = proccess.port.env;
+const port = process.env.PORT;
 const router = require('./Items/router/router')
 
 app.use(cors({
